@@ -67,3 +67,70 @@ header p {
   text-align: left;
   line-height: 1.6;
 }
+input,
+select {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid gold;
+  border-radius: 10px;
+  background: #1b1b1b;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+#generateBtn,
+#copyBtn {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 15px;
+  background: gold;
+  color: black;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#copyBtn {
+  background: #222;
+  color: gold;
+  border: 1px solid gold;
+}
+
+#generateBtn:hover,
+#copyBtn:hover {
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+
+#output {
+  margin-top: 25px;
+  min-height: 150px;
+  word-wrap: break-word;
+}
+
+.hero {
+  max-width: 700px;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+}
