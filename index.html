@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thomas AI Studio — Create Like a Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Thomas AI Studio</h1>
+  <p>Transform simple ideas into premium AI prompts.</p>
+</header>
+
+<main>
+  <section class="hero">
+
+    <h2>Create Luxury Portrait & Video Prompts</h2>
+
+    <input
+      type="text"
+      id="ideaInput"
+      placeholder="Describe your idea..."
+    >
+
+    <select id="category">
+      <option value="portrait">Studio Portrait</option>
+      <option value="cinematic">Cinematic Portrait</option>
+      <option value="fashion">Fashion Editorial</option>
+      <option value="traditional">Traditional Luxury</option>
+      <option value="video">AI Video Prompt</option>
+    </select>
+
+    <select id="length">
+      <option value="quick">Quick</option>
+      <option value="professional" selected>Professional</option>
+      <option value="master">Master</option>
+    </select>
+
+    <button id="generateBtn">
+      Generate Premium Prompt
+    </button>
+
+    <div id="output">
+      Your premium prompt will appear here...
+    </div>
+
+    <button id="copyBtn">
+      Copy Prompt
+    </button>
+
+  </section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
