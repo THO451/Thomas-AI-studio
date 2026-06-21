@@ -33,7 +33,8 @@ const copyBtn = document.getElementById("copyBtn");
 const output = document.getElementById("output");
 
 generateBtn.addEventListener("click", function () {
-  const idea = document.getElementById("ideaInput").value;
+  let idea = document.getElementById("ideaInput").value.trim();
+idea = enhanceIdea(idea);
   const category = document.getElementById("category").value;
 
   if (idea.trim() === "") {
