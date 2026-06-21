@@ -1,29 +1,30 @@
-if (category === "video") {
-    prompt =
-      `Cinematic AI video concept featuring ${idea}, dynamic camera movement, realistic environment, professional storytelling, dramatic lighting, smooth transitions, premium film look, ultra-detailed visuals, high-end production quality.`;
+const generateBtn = document.getElementById("generateBtn");
+const copyBtn = document.getElementById("copyBtn");
+const output = document.getElementById("output");
+
+generateBtn.addEventListener("click", function () {
+  const idea = document.getElementById("ideaInput").value;
+  const category = document.getElementById("category").value;
+
+  if (idea.trim() === "") {
+    output.textContent = "Please describe your idea first.";
+    return;
   }
 
-  if (length === "professional") {
-    prompt +=
-      " Clean Photoshop-style compositing, luxury visual aesthetics, realistic environmental blending, professional color grading, premium editorial finish.";
-  }
-
-  if (length === "master") {
-    prompt +=
-      " Ultra-premium editorial quality, advanced storytelling elements, luxury composition, cinematic depth, realistic environmental integration, natural light behavior, professional Photoshop-style design, refined visual hierarchy, exceptional detail retention, magazine-cover quality finish.";
-  }
-
-  output.textContent = prompt;
+  output.textContent =
+    "Premium " +
+    category +
+    " prompt: " +
+    idea +
+    ", luxury editorial style, cinematic lighting, ultra-detailed, professional quality.";
 });
 
-copyBtn.addEventListener("click", () => {
-
+copyBtn.addEventListener("click", function () {
   navigator.clipboard.writeText(output.textContent);
 
   copyBtn.textContent = "Copied!";
 
-  setTimeout(() => {
+  setTimeout(function () {
     copyBtn.textContent = "Copy Prompt";
   }, 2000);
-
 });
