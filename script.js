@@ -28,13 +28,11 @@ function enhanceIdea(idea) {
 const generateBtn = document.getElementById("generateBtn");
 const copyBtn = document.getElementById("copyBtn");
 const output = document.getElementById("output");
-const generateBtn = document.getElementById("generateBtn");
-const copyBtn = document.getElementById("copyBtn");
-const output = document.getElementById("output");
 
 generateBtn.addEventListener("click", function () {
   let idea = document.getElementById("ideaInput").value.trim();
-idea = enhanceIdea(idea);
+  idea = enhanceIdea(idea);
+
   const category = document.getElementById("category").value;
 
   if (idea.trim() === "") {
