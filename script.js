@@ -9,11 +9,7 @@ function enhanceIdea(idea) {
     "graduate man": "successful graduate in academic attire",
     "graduate": "successful graduate in academic attire",
     "ceo man": "powerful chief executive officer",
-    "traditional man": "elegantly dressed man in traditional attire",
-    "house": "luxurious modern home",
-    "car": "luxury vehicle",
-    "girl model": "professional female fashion model",
-    "boy model": "professional male fashion model"
+    "traditional man": "elegantly dressed man in traditional attire"
   };
 
   for (let key in replacements) {
@@ -22,8 +18,37 @@ function enhanceIdea(idea) {
     }
   }
 
-  return idea;
+  const wordMap = {
+    "man": "confident man",
+    "woman": "elegant woman",
+    "boy": "young boy",
+    "girl": "young girl",
+    "house": "luxurious modern home",
+    "car": "luxury vehicle",
+    "office": "executive office",
+    "school": "prestigious academic campus",
+    "road": "modern city street",
+    "birthday": "birthday celebration",
+    "graduation": "graduation ceremony",
+    "rain": "rain-soaked atmosphere",
+    "night": "cinematic nighttime setting",
+    "sunset": "golden sunset lighting",
+    "king": "royal king",
+    "queen": "elegant queen",
+    "doctor": "professional medical doctor",
+    "lawyer": "distinguished legal professional"
+  };
+
+  let words = idea.split(" ");
+
+  words = words.map(word => {
+    return wordMap[word] || word;
+  });
+
+  return words.join(" ");
 }
+  
+  
 
 const generateBtn = document.getElementById("generateBtn");
 const copyBtn = document.getElementById("copyBtn");
