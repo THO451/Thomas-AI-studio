@@ -36,7 +36,30 @@ function enhanceIdea(idea) {
     "king": "royal king",
     "queen": "elegant queen",
     "doctor": "professional medical doctor",
-    "lawyer": "distinguished legal professional"
+    "lawyer": "distinguished legal professional",
+    "pilot": "professional airline pilot",
+    "soldier": "disciplined military officer",
+    "student": "ambitious student",
+    "teacher": "distinguished educator",
+    "engineer": "skilled engineer",
+    "farmer": "hardworking farmer",
+     "hotel": "five-star luxury hotel",
+    "forest": "lush green forest",
+     "mountain": "majestic mountain landscape",
+    "church": "beautiful historic church",
+    "mosque": "magnificent mosque",
+     "baby": "adorable young child",
+   "wedding": "luxury wedding celebration",
+    "party": "elegant celebration event",
+    "business": "high-level corporate environment",
+    "suit": "tailored luxury suit",
+    "dress": "elegant designer dress",
+    "beach": "luxury tropical beach",
+    "artist": "talented creative artist",
+    "actor": "professional film actor",
+    "singer": "successful music artist",
+    "restaurant": "luxury fine dining restaurant",
+    "river": "beautiful riverside landscape",
   };
 
   let words = idea.split(" ");
@@ -44,8 +67,31 @@ function enhanceIdea(idea) {
   words = words.map(word => {
     return wordMap[word] || word;
   });
+  let enhanced = words.join(" ");
 
-  return words.join(" ");
+if (
+  enhanced.includes("confident man") &&
+  enhanced.includes("luxury vehicle")
+) {
+  enhanced =
+    "a confident man standing beside a luxury vehicle";
+}
+
+if (
+  enhanced.includes("executive office")
+) {
+  enhanced +=
+    " outside an executive office";
+}
+
+if (
+  enhanced.includes("cinematic nighttime setting")
+) {
+  enhanced +=
+    " in a cinematic nighttime setting";
+}
+
+return enhanced;
 }
   
   
