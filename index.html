@@ -15,46 +15,47 @@
 
 <main>
   <section class="hero">
+<h2>Create Luxury Portrait & Video Prompts</h2>
 
-    <h2>Create Luxury Portrait & Video Prompts</h2>
+<input
+  type="text"
+  id="ideaInput"
+  placeholder="Describe your idea..."
+>
 
-    <input
-      type="text"
-      id="ideaInput"
-      placeholder="Describe your idea..."
-    >
+<select id="category">
+  <option value="portrait">Studio Portrait</option>
+  <option value="cinematic">Cinematic Portrait</option>
+  <option value="fashion">Fashion Editorial</option>
+  <option value="traditional">Traditional Luxury</option>
+  <option value="video">AI Video Prompt</option>
+</select>
 
-    <select id="category">
-      <option value="portrait">Studio Portrait</option>
-      <option value="cinematic">Cinematic Portrait</option>
-      <option value="fashion">Fashion Editorial</option>
-      <option value="traditional">Traditional Luxury</option>
-      <option value="video">AI Video Prompt</option>
-    </select>
+<select id="length">
+  <option value="quick">Quick</option>
+  <option value="professional" selected>Professional</option>
+  <option value="master">Master</option>
+</select>
 
-    <select id="length">
-      <option value="quick">Quick</option>
-      <option value="professional" selected>Professional</option>
-      <option value="master">Master</option>
-    </select>
+<button id="generateBtn">
+  Generate Premium Prompt
+</button>
 
-    <button id="generateBtn">
-      Generate Premium Prompt
-    </button>
+<div id="output">
+  Your premium prompt will appear here...
+</div>
 
-    <div id="output">
-      Your premium prompt will appear here...
-    </div>
-
-    <button id="copyBtn">
-      Copy Prompt
-    </button>
 <h3>Recent Prompts</h3>
 <div id="history"></div>
+
+<button id="copyBtn">
+  Copy Prompt
+</button>
+
   </section>
 </main>
 
 <script src="script.js"></script>
 
 </body>
-                                                </html>
+  </html>
