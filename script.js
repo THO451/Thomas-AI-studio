@@ -99,7 +99,8 @@ return enhanced;
 const generateBtn = document.getElementById("generateBtn");
 const copyBtn = document.getElementById("copyBtn");
 const output = document.getElementById("output");
-
+const historyDiv = document.getElementById("history");
+let promptHistory = [];
 generateBtn.addEventListener("click", function () {
   let idea = document.getElementById("ideaInput").value.trim();
   idea = enhanceIdea(idea);
@@ -160,8 +161,22 @@ generateBtn.addEventListener("click", function () {
   }
 
   output.textContent = prompt;
-});
 
+promptHistory.unshift(prompt);
+
+if (promptHistory.length > 5) {
+  promptHistory.pop();
+}
+
+historyDiv.innerHTML = "";
+
+promptHistory.forEach(item => {
+  historyDiv.innerHTML +=
+    "<p style='margin:10px 0;padding:10px;border:1px solid gold;border-radius:8px;'>" +
+    item +
+    "</p>";
+});
+}); // closes generateBtn event 
 copyBtn.addEventListener("click", function () {
   navigator.clipboard.writeText(output.textContent);
 
